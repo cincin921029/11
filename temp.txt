@@ -1,0 +1,419 @@
+1902:    <div className="screen welcome-screen">
+1903:        <h1 className="logo">拾音旅伴</h1>
+1904:        <button className="welcome-button" onClick={onWelcome}>Welcome</button>
+1912:        <div className="screen auth-screen">
+1913:            <div className="auth-form">
+1920:                        <button className="primary-button" onClick={onLogin}>登入</button>
+1921:                        <a className="toggle-link" onClick={() => setIsLogin(false)}>沒有帳號？ 註冊</a>
+1930:                        <button className="primary-button" onClick={onLogin}>註冊</button>
+1931:                        <a className="toggle-link" onClick={() => setIsLogin(true)}>有過帳號？ 登入</a>
+1934:                <button className="secondary-button">Continue with Google</button>
+1935:                <button className="secondary-button">Continue with Apple</button>
+1953:        <div className="screen api-key-screen">
+1954:            <div className="api-key-form-wrapper">
+1959:                <div className="api-key-form-inner">
+1965:                        className="form-input"
+1967:                    <button onClick={handleSave} className="form-submit-btn">儲存並繼續</button>
+1990:        <div className={overlayClasses} onClick={onClose}>
+1991:            <div className={contentClasses} onClick={(e) => e.stopPropagation()}>
+1993:                    <header className="modal-header">
+1994:                         <div className="modal-header-placeholder left"></div>
+1995:                        <h2 className="modal-title">{title}</h2>
+1996:                        <button onClick={onClose} className="modal-close-button">&times;</button>
+1999:                <div className="modal-body">
+2040:            className={`announcement-card-v2 ${isUrgent ? 'urgent' : ''}`}
+2042:            <div className="announcement-card-header">
+2043:                <div className="announcement-type-icon">
+2045:                        <AlertTriangle size={16} className="text-[#c15130]" />
+2047:                        <Bus size={16} className="text-blue-500" />
+2049:                        <Bell size={16} className="text-amber-500" />
+2054:            <div className="announcement-body-v2">
+2055:                <h4 className="announcement-title-v2">{title}</h4>
+2056:                <p className="announcement-text-v2">{content}</p>
+2086:        <header className="modal-header-v2">
+2087:            <div className="relative w-full py-4 min-h-[56px]">
+2089:                <button onClick={onClose} className="absolute left-4 top-1/2 -translate-y-1/2 z-10 close-btn-v2 flex items-center justify-center">
+2094:                <h2 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-sm font-bold tracking-[0.05em] uppercase text-gray-400 text-center pl-[0.05em] pointer-events-none whitespace-nowrap">
+2102:            <div className="announcements-container-v2">
+2104:                <div className="filter-section-v2">
+2105:                    <div className="filter-tabs-v2 no-scrollbar">
+2110:                                className={`filter-tab-v2 ${selectedFestival === fest ? 'active' : ''}`}
+2119:                <div className="announcements-scroll-area">
+2127:                                className="announcement-group-v2"
+2129:                                <div className="group-header-v2">
+2130:                                    <div className="flex items-center gap-2">
+2132:                                            className="group-indicator-v2" 
+2135:                                        <h3 className="group-title-v2">{festival}</h3>
+2137:                                    <span className="group-count-v2">
+2141:                                <div className="group-content-v2">
+2157:                        <div className="empty-state-v2">
+2158:                            <div className="empty-icon-v2">📢</div>
+2165:                        <div className="empty-state-v2">
+2166:                            <div className="empty-icon-v2">🔍</div>
+2973:        <header className="modal-header" style={{ 
+2981:            <button onClick={onClose} className="modal-back-button" style={{ 
+3054:        <Modal isOpen={isOpen} onClose={onClose} headerContent={header} fullscreen className="location-modal-v2">
+3055:             <div className="location-modal-body" style={{ display: 'flex', flexDirection: 'column', position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
+3057:                    <div className="map-error-message" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 10, background: 'rgba(255,255,255,0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px', textAlign: 'center'}}>{mapError}</div>
+3059:                <div className="map-wrapper" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0}}>
+3060:                            <div className="location-search-container" style={{
+3085:                            <div ref={mapRef} className="google-map-container" style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0}}></div>
+3086:                            <button className="locate-me-btn" onClick={handleLocateMe} aria-label="Locate me" style={{zIndex: 5}}>
+3094:                                className="toggle-friend-list-btn" 
+3125:                            <div className="friend-list-container open" style={{zIndex: 10}}>
+3126:                                <div className="friend-list">
+3127:                                    <div className="friend-list-header" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem'}}>
+3196:                                                className={`friend-list-item ${activeMarkerId === marker.id ? 'active' : ''}`}
+3205:                                                <div className="friend-list-avatar" style={{backgroundColor: '#B84C2E'}}>
+3210:                                                <div className="friend-list-details">
+3211:                                                    <div className="friend-list-name">{marker.name}</div>
+3212:                                                    <div className="friend-list-status" style={{fontSize: '0.75rem', color: '#6B7280'}}>{marker.status}</div>
+3257:                            <div className="friend-list-container open" style={{zIndex: 10}}>
+3258:                                <div className="friend-list">
+3259:                                    <div className="friend-list-header" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem'}}>
+3307:                        <div className={`friend-list-container ${isFriendListOpen ? 'open' : ''}`}>
+3308:                            <div className="friend-list">
+3309:                                <div className="friend-list-header" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem'}}>
+3321:                                <div className="friend-search-wrapper" style={{padding: '0 0 1rem 0'}}>
+3326:                                            className="friend-search-input"
+3358:                                        className="friend-search-input"
+3373:                                        className={`friend-list-item user-list-item ${activeMarkerId === user.id ? 'active' : ''}`}
+3376:                                        <div className="friend-list-avatar user-avatar" style={{backgroundColor: isSharingLive ? '#43607D' : '#9CA3AF'}}>您</div>
+3377:                                        <div className="friend-list-details">
+3378:                                            <div className="user-status-row" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%'}}>
+3379:                                                <span className="friend-list-name" style={{color: isSharingLive ? '#43607D' : '#6B7280'}}>您正在這裡</span>
+3381:                                                    className={`toggle-sharing-btn ${isSharingLive ? 'active' : ''}`} 
+3388:                                            <span className="friend-list-status">{user.status}</span>
+3400:                                            className={`friend-list-item ${activeMarkerId === marker.id ? 'active' : ''}`}
+3403:                                            <div className="friend-list-avatar" style={{backgroundColor: bgColor, color: 'white'}}>{marker.initials || marker.name.charAt(0).toUpperCase()}</div>
+3404:                                            <div className="friend-list-details">
+3405:                                                <span className="friend-list-name">{marker.name}</span>
+3407:                                                    <span className="friend-list-status" style={{fontSize: '0.8rem', color: '#6B7280'}}>{marker.status || marker.location}</span>
+3458:        <header className="modal-header">
+3459:            <button onClick={onClose} className="modal-back-button">
+3463:            <div className="modal-title timetable-header-title">
+3465:                <span className="subtitle">{formattedDate} • 官方時刻表</span>
+3467:            <div className="modal-header-placeholder"></div>
+3472:        <Modal isOpen={isOpen} onClose={onClose} headerContent={header} fullscreen className="timetable-modal">
+3475:                    <div key={stageName} className="timetable-stage">
+3476:                        {stageName && <h3 className="timetable-stage-name">{stageName}</h3>}
+3477:                        <div className="timetable-performance-list">
+3482:                                    <div key={index} className="timetable-performance-item">
+3483:                                        <div className="performance-time-container">
+3484:                                            <span className="performance-time">{p.time}</span>
+3486:                                        <span className="performance-artist">{p.artist}</span>
+3488:                                            className={`add-to-schedule-btn ${isAdded ? 'added' : ''}`}
+3501:                <p className="no-timetable-message">本日時刻表尚未公布</p>
+3539:        <header className="modal-header">
+3540:            <button onClick={onClose} className="modal-back-button">&times;</button>
+3541:            <div className="modal-title timetable-header-title">
+3545:            <div className="modal-header-placeholder"></div>
+3550:        <Modal isOpen={isOpen} onClose={onClose} headerContent={header} fullscreen className="timetable-modal">
+3552:                <div className="timetable-performance-list">
+3556:                            <div key={p.id} className="timetable-performance-item">
+3557:                                <div className="performance-time-container">
+3558:                                    <span className="performance-time">{p.time}</span>
+3560:                                <div className="performance-details" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+3561:                                    <span className="performance-artist">{p.artist}</span>
+3562:                                    <span className="performance-stage" style={{ fontSize: '0.8rem', color: '#6B7280', marginTop: '4px' }}>{p.stage}</span>
+3565:                                    className={`add-to-schedule-btn ${isAdded ? 'added' : ''}`}
+3577:                <p className="no-timetable-message">您的行程表是空的，請至官方時刻表新增。</p>
+3657:        <Modal isOpen={isOpen} onClose={handleSaveAndClose} title={formattedDate} className="daily-planner-modal">
+3658:            <div className="daily-planner-content">
+3660:                    <div className="daily-planner-festival-section">
+3662:                            <div key={fest.id} className="festival-timetable-group">
+3663:                                <h4 className="daily-planner-festival-name" style={{ color: getFestivalColor(fest.name), borderLeft: `4px solid ${getFestivalColor(fest.name)}`, paddingLeft: '8px' }}>
+3666:                                <div className="timetable-buttons">
+3667:                                    <button className="timetable-button" onClick={() => onShowTimetable('official', fest, date)}>官方時刻表</button>
+3668:                                    <button className="timetable-button" onClick={() => onShowTimetable('user', fest, date)}>我的行程</button>
+3674:                <div className="daily-planner-personal-section">
+3675:                    <h4 className="personal-section-header">個人行程</h4>
+3681:                        className="schedule-title-input"
+3683:                    <form className="add-schedule-form" onSubmit={handleAddItem}>
+3689:                            className="schedule-time-input"
+3697:                            className="schedule-activity-input"
+3701:                    <div className="custom-schedule-list">
+3704:                                <div key={item.id} className={`custom-schedule-item ${item.isOfficial ? 'official-item' : ''}`}>
+3705:                                    <span className="schedule-item-time">{item.time}</span>
+3706:                                    <div className="schedule-item-details" style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+3707:                                        <span className="schedule-item-activity">{item.activity}</span>
+3709:                                            <span className="schedule-item-stage" style={{ fontSize: '0.8rem', color: '#6B7280', marginTop: '2px' }}>
+3715:                                        <button onClick={() => onToggleSchedule(item.id)} className="delete-schedule-item-btn" aria-label="Remove from schedule">
+3719:                                        <button onClick={() => handleDeleteItem(item.id)} className="delete-schedule-item-btn" aria-label="Delete item">&times;</button>
+3724:                            <p className="no-timetable-message">本日尚無行程，請在上方新增。</p>
+3826:        <form className="create-accommodation-form" onSubmit={handleSubmit}>
+3835:            <div className="form-group">
+3836:                <label htmlFor="festivalName" className="form-label">目標音樂祭</label>
+3837:                 <input type="text" id="festivalName" name="festivalName" value={listingDetails.festivalName} onChange={handleInputChange} required className="form-input" placeholder="例如：浪人祭" />
+3839:            <div className="form-group">
+3840:                <label htmlFor="address" className="form-label">住宿地址</label>
+3841:                <input type="text" id="address" name="address" value={listingDetails.address} onChange={handleInputChange} required className="form-input" placeholder="例如：台南市安平區" />
+3843:            <div className="form-group-inline">
+3844:                <div className="form-group">
+3845:                    <label htmlFor="pricePerNight" className="form-label">每晚價格 (TWD)</label>
+3846:                    <input type="number" id="pricePerNight" name="pricePerNight" value={listingDetails.pricePerNight} onChange={handleInputChange} required className="form-input" min="0" />
+3848:                 <div className="form-group">
+3849:                    <label htmlFor="checkInTime" className="form-label">入住時間</label>
+3850:                     <input type="text" id="checkInTime" name="checkInTime" value={listingDetails.checkInTime} onChange={handleInputChange} required className="form-input" placeholder="例如: 15:00" />
+3853:             <div className="form-group">
+3854:                <label htmlFor="description" className="form-label">描述</label>
+3855:                <textarea id="description" name="description" value={listingDetails.description} onChange={handleInputChange} className="form-input" placeholder="例如：提供沙發床、限女性..."></textarea>
+3857:            <div className="form-group">
+3858:                <label className="form-label">照片 (最多5張)</label>
+3859:                <div className="photo-upload-preview-grid">
+3861:                        <div key={index} className="photo-preview-item">
+3863:                            <button type="button" onClick={() => removePhoto(index)} className="remove-photo-btn">&times;</button>
+3867:                         <button type="button" onClick={() => fileInputRef.current?.click()} className="add-photo-btn">+</button>
+3871:            <button type="submit" className="form-submit-btn">{isEditing ? '儲存變更' : '發佈住宿資訊'}</button>
+3896:        <div className="accommodation-card">
+3898:                <div className="card-actions">
+3899:                    <button onClick={() => onEdit(listing)} className="edit-btn">編輯</button>
+3900:                    <button onClick={() => onDelete(listing.id)} className="delete-btn">刪除</button>
+3903:             <div className="accommodation-photo-gallery">
+3909:                                <button onClick={goToPrevPhoto} className="photo-nav-btn prev" aria-label="Previous photo">&#10094;</button>
+3910:                                <button onClick={goToNextPhoto} className="photo-nav-btn next" aria-label="Next photo">&#10095;</button>
+3911:                                <div className="photo-dots">
+3913:                                        <span key={index} className={`dot ${index === currentPhotoIndex ? 'active' : ''}`}></span>
+3920:                    <div className="photo-placeholder">
+3925:            <div className="accommodation-card-header">
+3926:                <h4 className="accommodation-destination"> near {listing.festivalName}</h4>
+3928:            <div className="accommodation-card-body">
+3932:                 <div className="accommodation-notes">
+3936:            <div className="accommodation-card-footer">
+3937:                <div className="accommodation-host-info">
+3938:                    <div className="host-avatar">{listing.host.initials}</div>
+3941:                 {!isOwner && <button onClick={() => onContact(listing)} className="accommodation-join-btn">傳送訊息</button>}
+3987:        <form className="create-carpool-form" onSubmit={handleSubmit}>
+3988:            <div className="form-group">
+3989:                <label htmlFor="festivalName" className="form-label">目標音樂祭</label>
+3990:                <input type="text" id="festivalName" name="festivalName" value={tripDetails.festivalName} onChange={handleInputChange} required className="form-input" placeholder="例如：火球祭" />
+3992:            <div className="form-group-inline">
+3993:                <div className="form-group">
+3994:                    <label htmlFor="origin" className="form-label">出發地</label>
+3995:                    <input type="text" id="origin" name="origin" value={tripDetails.origin} onChange={handleInputChange} required className="form-input" placeholder="例如：台北車站" />
+3997:                <div className="form-group">
+3998:                    <label htmlFor="departureTime" className="form-label">出發時間</label>
+3999:                    <input type="text" id="departureTime" name="departureTime" value={tripDetails.departureTime} onChange={handleInputChange} required className="form-input" placeholder="例如：11/30 08:00" />
+4002:            <div className="form-group">
+4003:                <label htmlFor="notes" className="form-label">備註</label>
+4004:                <textarea id="notes" name="notes" value={tripDetails.notes} onChange={handleInputChange} className="form-input" placeholder="例如：分攤油錢、禁菸..."></textarea>
+4006:            <button type="submit" className="form-submit-btn">{isEditing ? '儲存變更' : '發佈共乘資訊'}</button>
+4029:        <div className="carpool-card">
+4031:                <div className="card-actions">
+4032:                    <button onClick={() => onEdit(trip)} className="edit-btn">編輯</button>
+4033:                    <button onClick={() => onDelete(trip.id)} className="delete-btn">刪除</button>
+4036:            <div className="carpool-card-header">
+4037:                <h4 className="carpool-destination">前往 {trip.festivalName}</h4>
+4039:            <div className="carpool-card-body">
+4042:                <div className="carpool-notes">
+4046:            <div className="carpool-card-footer">
+4047:                <div className="carpool-driver-info">
+4048:                    <div className="driver-avatar">{trip.driver.initials}</div>
+4051:                {!isOwner && <button onClick={() => onContact(trip)} className="carpool-join-btn">傳送訊息</button>}
+4066:        <div className="confirmation-dialog-overlay" onClick={onClose}>
+4067:            <div className="confirmation-dialog" onClick={e => e.stopPropagation()}>
+4070:                <div className="confirmation-actions">
+4071:                    <button onClick={onClose} className="cancel-btn">取消</button>
+4072:                    <button onClick={onConfirm} className="confirm-btn">確認</button>
+4161:        <header className="modal-header">
+4162:            <button onClick={handleBack} className="modal-back-button">&lt; Back</button>
+4163:            <h2 className="modal-title">{showForm ? (editingTrip ? '編輯共乘' : '新增共乘') : '共乘'}</h2>
+4164:            <div className="modal-header-placeholder"></div>
+4169:        <Modal isOpen={isOpen} onClose={onClose} headerContent={header} fullscreen className="carpool-modal">
+4170:            <div className="modal-feature-container carpool-feature-container">
+4172:                    <div className="form-wrapper">
+4181:                        <div className="list-filters">
+4182:                            <div className="filter-group">
+4188:                                    className="filter-input"
+4191:                            <div className="filter-group">
+4197:                                    className="filter-input"
+4201:                        <div className="carpool-list">
+4213:                                <div className="no-results">找不到符合條件的共乘</div>
+4219:                    <button onClick={() => setShowForm(true)} className="fab-create-carpool">
+4321:        <header className="modal-header">
+4322:            <button onClick={handleBack} className="modal-back-button">&lt; Back</button>
+4323:            <h2 className="modal-title">{showForm ? (editingListing ? '編輯住宿' : '新增住宿') : '住宿'}</h2>
+4324:            <div className="modal-header-placeholder"></div>
+4329:        <Modal isOpen={isOpen} onClose={onClose} headerContent={header} fullscreen className="accommodation-modal">
+4330:            <div className="modal-feature-container accommodation-feature-container">
+4332:                     <div className="form-wrapper">
+4341:                        <div className="list-filters">
+4342:                            <div className="filter-row">
+4348:                                    className="filter-input"
+4355:                                    className="filter-input"
+4358:                            <div className="filter-row">
+4364:                                    className="filter-input"
+4371:                                    className="filter-input"
+4375:                        <div className="accommodation-list">
+4387:                                <div className="no-results">找不到符合條件的住宿</div>
+4393:                    <button onClick={() => setShowForm(true)} className="fab-create-carpool">
+4414:            return <span className="ended-button">活動結束</span>;
+4417:            return <span className="sold-out-button">票券完售</span>;
+4420:            return <span className="free-admission-button">免費入場</span>;
+4423:            <a href={festival.kktix} target="_blank" rel="noopener noreferrer" className="kktix-button">
+4424:                <Ticket size={16} className="inline-icon" /> 前往購票
+4430:        <div className="festival-card">
+4432:            <div className="festival-info">
+4434:                    <Calendar size={14} className="inline-icon" /> 
+4435:                    <span className="info-text"><strong>日期:</strong> {displayDate}</span>
+4438:                    <MapPin size={14} className="inline-icon" /> 
+4439:                    <span className="info-text"><strong>地點:</strong> {festival.location}</span>
+4442:            <div className="festival-lineup">
+4447:                <div className="festival-transportation">
+4448:                    <div className="transportation-header">
+4449:                        <Bus size={14} className="inline-icon" /> <strong>交通方式</strong>
+4451:                    <div className="transportation-content">
+4454:                            if (trimmedLine === '') return <p key={index} className="empty-line"></p>;
+4457:                                <p key={index} className={isBullet ? 'bullet-line' : 'normal-line'}>
+4642:        <div className="app-container">
+4813:        <div className="main-app-screen">
+4814:            <div className="main-content">
+4815:                <div className="home-screen">
+4816:                    <header className="home-header">
+4817:                        <h1 className="logo-small">拾音旅伴</h1>
+4818:                        <div className="search-bar-wrapper">
+4822:                                className="search-bar"
+4827:                                <button onClick={() => setSearchQuery('')} className="clear-search-btn">&times;</button>
+4832:                    <div className="keywords-container">
+4833:                        <span className="keywords-title">熱門搜尋:</span>
+4835:                            <button key={keyword} className="keyword-button" onClick={() => setSearchQuery(keyword)}>
+4842:                        <div className="search-results-container">
+4846:                                <p className="no-results">找不到符合條件音樂祭</p>
+4851:                            <div className="action-buttons">
+4852:                                <button className="action-button announcements" onClick={() => setIsAnnouncementsOpen(true)}>公告通知</button>
+4853:                                <button className="action-button location" onClick={() => setIsLocationModalOpen(true)}>即時位置</button>
+4854:                                <button className="action-button carpool" onClick={() => setIsCarpoolModalOpen(true)}>共乘</button>
+4855:                                <button className="action-button accommodation" onClick={() => setIsAccommodationModalOpen(true)}>住宿</button>
+4858:                            <div className="itinerary-section">
+4860:                                <div className="calendar">
+4861:                                    <div className="calendar-header">
+4866:                                    <div className="calendar-grid">
+4867:                                        {['日', '一', '二', '三', '四', '五', '六'].map(d => <div key={d} className="day-header">{d}</div>)}
+4868:                                        {Array.from({ length: startDayOfWeek }).map((_, i) => <div key={`empty-${i}`} className="day not-current-month"></div>)}
+4876:                                                <div key={day.toISOString()} className={`day ${isToday ? 'today' : ''}`} onClick={() => handleDayClick(day)}>
+4877:                                                    <span className="day-number">{day.getDate()}</span>
+4878:                                                    <div className="day-festivals">
+4882:                                                                className="festival-indicator"
+4889:                                                            <div className="custom-schedule-title-indicator">{customSchedule.title}</div>
+5195:        <div className="main-app-screen">
+5196:            <div className="main-content">
+5197:                <div className="profile-screen">
+5198:                     <div className="profile-header">
+5199:                        <button className="avatar-button" onClick={handleAvatarClick}>
+5201:                                <img src={avatar} alt="User Avatar" className="avatar-image"/>
+5203:                                <div className="avatar-placeholder">
+5208:                                    <div className="avatar-add-badge">
+5217:                        <div className="name-container">
+5219:                                <div className="name-display">
+5221:                                    <button onClick={handleEditName} className="name-action-button" aria-label="Edit name">
+5226:                                <div className="name-editor-container">
+5227:                                    <div className="name-editor">
+5228:                                        <div className="input-with-status">
+5233:                                                className={`name-input ${nameError ? 'has-error' : ''} ${isNameAvailable === true ? 'is-valid' : ''}`} 
+5237:                                            <div className="status-indicator">
+5238:                                                {isCheckingName && <div className="spinner-small"></div>}
+5247:                                        <div className="editor-actions">
+5250:                                                className="name-action-button save" 
+5258:                                                className="name-action-button cancel" 
+5265:                                    {nameError && <div className="name-error-message">{nameError}</div>}
+5271:                    <div className="digital-archive">
+5272:                        <div className="digital-archive-header">
+5274:                            <button onClick={() => { setActiveMemory(null); setIsEditingMemory(true); setIsMemoryModalOpen(true); }} className="add-memory-btn" aria-label="Add new memory">+</button>
+5277:                            <div className="archive-grid">
+5279:                                    <div key={item.id} className="archive-item" onClick={() => { setActiveMemory(item); setIsEditingMemory(false); setIsMemoryModalOpen(true); }}>
+5282:                                            <div className="media-indicator multi-icon">
+5287:                                            <div className="media-indicator">
+5295:                            <div className="archive-empty">還沒有回憶，新增一個吧！</div>
+5299:                    <div className="settings-section">
+5300:                        <div className="setting-item">
+5301:                            <span className="setting-label">深夜模式</span>
+5302:                            <label className="toggle-switch">
+5308:                                <span className="toggle-slider"></span>
+5313:                    <button className="logout-button" onClick={onLogout}>登出</button>
+5322:                <div className="action-sheet-overlay" onClick={() => setIsActionSheetOpen(false)}>
+5323:                    <div className="action-sheet" onClick={e => e.stopPropagation()}>
+5324:                        <div className="action-sheet-group">
+5325:                            <button className="action-sheet-button" onClick={() => fileInputRef.current?.click()}>從相簿選擇</button>
+5327:                                <button className="action-sheet-button delete" onClick={handleDeleteAvatar}>刪除目前頭像</button>
+5330:                        <div className="action-sheet-group">
+5331:                            <button className="action-sheet-button cancel" onClick={() => setIsActionSheetOpen(false)}>取消</button>
+5338:                <div className="avatar-cropper-body">
+5339:                    <div className="cropper-container">
+5354:                    <div className="cropper-controls">
+5355:                        <div className="slider-container">
+5368:                        <div className="cropper-actions">
+5369:                            <button className="cropper-btn-cancel" onClick={() => setIsCropperOpen(false)}>取消</button>
+5370:                            <button className="cropper-btn-save" onClick={showCroppedImage}>完成</button>
+5468:        <header className="modal-header">
+5471:                    <button onClick={onClose} className="modal-back-button">取消</button>
+5472:                    <h2 className="modal-title">{memory ? '編輯回憶' : '新增回憶'}</h2>
+5473:                    <button onClick={handleSaveClick} className="modal-back-button">儲存</button>
+5477:                    <button onClick={onClose} className="modal-back-button">&lt; Back</button>
+5478:                    <h2 className="modal-title">回憶</h2>
+5480:                        <button onClick={() => setIsEditing(true)} className="modal-back-button">編輯</button>
+5481:                        <button onClick={() => onDelete(memory!.id)} className="modal-back-button" style={{color: '#c15130'}}>刪除</button>
+5491:                <div className="memory-form">
+5493:                    <div className="memory-media-grid">
+5495:                            <div key={media.id} className="memory-media-item">
+5497:                                <button onClick={() => removeMedia(index)} className="remove-media-btn">&times;</button>
+5500:                        <button onClick={() => mediaInputRef.current?.click()} className="add-media-btn">+</button>
+5502:                    <div className="form-group">
+5503:                        <label className="form-label">標題</label>
+5504:                        <input type="text" name="title" value={currentMemory.title} onChange={handleInputChange} className="form-input" />
+5506:                    <div className="form-group">
+5507:                        <label className="form-label">描述</label>
+5508:                        <textarea name="description" value={currentMemory.description} onChange={handleInputChange} className="form-input" rows={4}></textarea>
+5512:                <div className="memory-viewer-body">
+5514:                        <div className="memory-viewer-carousel">
+5516:                                <img src={currentMemory.media[currentMediaIndex].url} className="carousel-image" alt="Memory view"/>
+5518:                                <video src={currentMemory.media[currentMediaIndex].url} className="carousel-video" controls/>
+5522:                                    <button onClick={() => setCurrentMediaIndex(p => (p - 1 + currentMemory.media!.length) % currentMemory.media!.length)} className="carousel-nav-btn prev">&#10094;</button>
+5523:                                    <button onClick={() => setCurrentMediaIndex(p => (p + 1) % currentMemory.media!.length)} className="carousel-nav-btn next">&#10095;</button>
+5528:                    <div className="memory-viewer-content">
+5635:             <div className="main-app-screen">
+5636:                <div className="chat-view" onDragOver={handleDragOver} onDrop={handleDrop}>
+5637:                    <header className="chat-header">
+5638:                        <button onClick={() => setSelectedConversation(null)} className="chat-back-btn">&lt;</button>
+5639:                        <div className="chat-participant-avatar">{selectedConversation.participant.initials}</div>
+5640:                        <div className="chat-participant-info">
+5646:                        <div className="chat-post-info-container">
+5647:                            <div className="chat-post-card">
+5648:                                <div className={`post-type-badge ${'origin' in relatedPost ? 'carpool' : 'accommodation'}`}>
+5656:                                <div className="post-card-content">
+5657:                                    <h5 className="post-card-title">
+5662:                                    <div className="post-card-details">
+5663:                                        <div className="detail-item">
+5671:                                        <div className="detail-item">
+5682:                                    <div className="post-card-price">
+5683:                                        <span className="price-amount">${relatedPost.pricePerNight}</span>
+5684:                                        <span className="price-unit">/晚</span>
+5690:                    <div className="chat-messages">
+5698:                                <div key={msg.id} className={`message-item ${msg.sender}`}>
+5700:                                        <div className="message-avatar">
+5704:                                    <div className="message-content-wrapper">
+5705:                                        <div className="message-info">
+5706:                                            <span className="message-sender-name">{senderName}</span>
+5707:                                            <span className="message-time">
+5711:                                        <div className="message-bubble">
+5713:                                                <div className="message-image">
+5721:                                        <div className="message-avatar">
+5731:                        <div className="chat-image-preview">
+5733:                            <button className="remove-image-btn" onClick={() => setSelectedImage(null)}>×</button>
+5736:                    <form className="chat-input-form" onSubmit={handleSendMessage}>
+5746:                            className="image-upload-btn"
+5757:                        <button type="submit" className="chat-send-btn">
+5767:        <div className="main-app-screen">
+5768:            <div className="main-content">
+5769:                <div className="messages-screen">
+5770:                     <header className="messages-header">
+5773:                    <div className="conversation-list">
+5775:                            <div key={conv.id} className="conversation-item" onClick={() => setSelectedConversation(conv)}>
+5776:                                <div className="conversation-avatar">{conv.participant.initials}</div>
+5777:                                <div className="conversation-details">
+5778:                                    <div className="conversation-header">
+5780:                                        <span className="conversation-timestamp">
+5784:                                    <p className="conversation-preview">
+5799:    <nav className="bottom-nav">
+5800:        <button className={`nav-item ${activeScreen === 'home' ? 'active' : ''}`} onClick={() => navigateTo('home')}>
+5803:        <button className={`nav-item ${activeScreen === 'messages' ? 'active' : ''}`} onClick={() => navigateTo('messages')}>
+5806:        <button className={`nav-item ${activeScreen === 'profile' ? 'active' : ''}`} onClick={() => navigateTo('profile')}>

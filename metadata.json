@@ -1,0 +1,8 @@
+{
+  "name": "26",
+  "description": "An empty app",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
